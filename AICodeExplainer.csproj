@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>AICodeExplainer</RootNamespace> 
+    <UserSecretsId>03bb095d-38a4-4fe1-b6ed-c5033d7ba5c7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+</Project>

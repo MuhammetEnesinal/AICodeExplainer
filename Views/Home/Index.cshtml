@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Code Explainer";
+}
+
+<h1 class="mt-4 mb-4 text-center">Gemini Code Explainer</h1>
+
+<div class="container">
+    <div class="card shadow-sm p-4">
+        <form method="post" asp-action="ExplainCode">
+            @Html.AntiForgeryToken()
+
+            <label class="form-label fw-bold">Your Code:</label>
+            <textarea name="userCode" class="form-control mb-3" rows="12">@Html.Raw(ViewBag.UserCode)</textarea>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Explain Code
+            </button>
+        </form>
+    </div>
+
+    @if (ViewBag.Result != null)
+    {
+        <div class="card shadow-sm p-4 mt-4">
+            <h4 class="fw-bold">Explanation:</h4>
+            <pre class="bg-dark text-white p-3 rounded" style="white-space: pre-wrap;">@ViewBag.Result</pre>
+        </div>
+    }
+</div>

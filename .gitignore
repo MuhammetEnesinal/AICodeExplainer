@@ -1,0 +1,45 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build ve publish çıktıları
+bin/
+obj/
+out/
+publish/
+
+# NuGet paketleri
+*.nupkg
+*.snupkg
+packages/
+
+# ASP.NET Core secrets
+secrets.json
+user-secrets/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Test sonuçları
+TestResults/
+*.trx
+*.coverage
+
+# Rider, VSCode ayarları
+*.sln.iml
+
+# Dotnet global tools
+.tools/
