@@ -17,7 +17,6 @@ namespace AICodeExplainer.Services
       
         private readonly string[] _preferredModels = new string[]
         {
-            "gemini-1.5-preview",
             "gpt-4.1-mini",
             "gpt-4o-mini",
             "gpt-4o",

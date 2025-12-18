@@ -6,11 +6,11 @@ namespace AICodeExplainer.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly GeminiService _geminiService;
+        private readonly AIService _aiService;
 
-        public HomeController(GeminiService geminiService)
+        public HomeController(AIService aiService)
         {
-            _geminiService = geminiService;
+            _aiService = aiService;
         }
 
         [HttpGet]
@@ -31,7 +31,7 @@ namespace AICodeExplainer.Controllers
 
             try
             {
-                string explanation = await _geminiService.ExplainCodeAsync(userCode);
+                string explanation = await _aiService.ExplainCodeAsync(userCode);
 
                 ViewBag.UserCode = userCode;
                 ViewBag.Result = explanation;
