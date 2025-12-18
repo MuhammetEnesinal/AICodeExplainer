@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace AICodeExplainer.Services
 {
-    public class GeminiService
+    public class AIService
     {
         private readonly string _apiKey;
         private readonly IHttpClientFactory _httpClientFactory;
@@ -26,7 +26,7 @@ namespace AICodeExplainer.Services
 
         private string? _selectedModel;
 
-        public GeminiService(string apiKey, IHttpClientFactory httpClientFactory)
+        public AIService(string apiKey, IHttpClientFactory httpClientFactory)
         {
             _apiKey = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
             _httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));

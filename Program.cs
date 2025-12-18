@@ -12,12 +12,12 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddScoped<GeminiService>(sp =>
+builder.Services.AddScoped<AIService>(sp =>
 {
     var configuration = sp.GetRequiredService<IConfiguration>();
     var apiKey = configuration["Gemini:ApiKey"] 
         ?? throw new InvalidOperationException("Gemini API Key bulunamadı!");
-    return new GeminiService(apiKey, sp.GetRequiredService<IHttpClientFactory>());
+    return new AIService(apiKey, sp.GetRequiredService<IHttpClientFactory>());
 });
 
 // Swagger/OpenAPI desteği
